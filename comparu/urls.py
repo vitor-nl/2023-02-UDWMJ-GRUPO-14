@@ -25,4 +25,5 @@ urlpatterns = [
     path('clientes_redessociais/', include('clients.urls', namespace='clients_socialnetworks')),
     path('pedidos/', include('orders.urls', namespace='orders')),
     path('pedidos_itens/', include('orders.urls', namespace='orders_items')),
+    path('', include('core.urls', namespace='core')),
 ]

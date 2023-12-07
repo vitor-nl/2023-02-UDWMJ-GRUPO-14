@@ -1,0 +1,250 @@
+body {
+  background-color: #9F66A9 !important;
+}
+
+section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("img/salao.png");
+  background-repeat: repeat-y;
+  background-size: cover;
+  background-position: bottom;
+  z-index: -1;
+  opacity: 0.5;
+  height: 150%; /* Ajuste o valor conforme necessário */
+  overflow: hidden;
+  background-attachment: fixed;
+}
+
+
+/*---------------Cabeçalho-----------------*/
+
+.nav-fill .nav-item .nav-link {
+  color: white;
+  height: 50px;
+}
+
+.nav-fill .nav-item .nav-link.active {
+  border-radius: 40px;
+  background-color: #EB97ED;
+  color: black;
+}
+
+.nav-item {
+  font-family: 'Istok Web', sans-serif;
+  font-size: 20px;
+  color: white;
+  background: #44154F;
+}
+
+/*---------------carossel de imagens-----------------*/
+.carousel-item {
+  padding-top: 100px;
+  
+}
+
+.carousel-item img{
+    border-radius: 60px; 
+    width: 150px;
+  }
+
+.carousel-control-next-icon {
+  background-image: url(fotos/seta.png) !important;
+}
+
+/*---------------Texto-----------------*/
+
+.container-texto {
+  display: flex;
+  justify-content: center;
+}
+
+.texto {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  font-family: 'Ingrid Darling', cursive;
+  font-size: 40px;
+  margin-top: 40px;
+}
+
+/*--------------Carrosel de feedbakc--------------*/
+
+#carouselExample {
+  text-align: center;
+}
+
+#carouselExample .carousel-item {
+  transition: 1s linear;
+}
+
+#carouselExample .blockquote {
+  font-style: italic;
+  font-weight: bold;
+}
+
+#carouselExample small {
+  text-align: right;
+}
+
+#carouselExample i {
+  color: #222;
+}
+
+.rounded-circle{
+  width: 150px;
+}
+
+.row{
+  color: white;
+  background-color: #44154F;
+  border-radius: 65px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .carousel-title {
+    font-size: 18px;
+    margin-top: 20px;
+  }
+
+  #carouselExample .blockquote {
+    font-size: 15px;
+    text-align: center;
+    margin: 20px 0;
+  }
+
+  #carouselExample small {
+    text-align: center;
+    display: block;
+  }
+}
+
+
+.conteudo {
+  display: flex;
+  justify-content: center;
+}
+
+.container{
+  background-color: #f6ddfc;
+  border-radius: 15px;
+  margin: 14px;
+  max-width: 600px;
+  width: 100%;
+}
+
+.header {
+  background: -webkit-linear-gradient(left, #fbadf4, #eb6fff 100%);
+  padding: 15px;
+  text-align: center;
+  color: #FFF;
+  border-radius: 15px;
+}
+
+.form {
+  padding: 18px;
+}
+
+.form-content{
+  margin-bottom: 8px;
+  padding-bottom: 18px;
+  position: relative;
+}
+
+.form-content label{
+  display: inline-block;
+  margin-bottom: 4px;
+}
+
+.form-content input {
+  display: block;
+  width: 100%;
+  border-radius: 8px;
+  border: 2px solid #dfdfdf;
+}
+
+.form-content a {
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  visibility: hidden;
+}
+
+.form button {
+  background-color:#44154F;
+  color: #FFF;
+  width: 100%;
+  border-radius: 15px;
+  border: 0;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 14px;
+}
+
+.form-content.error input {
+  border-color: red;
+}
+
+.form-content.error a {
+  color: red;
+}
+
+.img {
+  align-items: center;
+
+}
+
+
+.rodape {
+  padding: 65px;
+  justify-content: center;
+  display: flex;
+  color: #FFF;
+  background: #44154F;
+  display: flex;
+  justify-content: center;
+}
+
+
+.dev {
+  position: relative;
+  right: 350px;
+  align-self: flex-end;
+}
+
+.dev2 {
+  position: absolute;
+  left: 640px;
+  bottom: 120px;
+}
+
+.dev3 {
+  position: relative;
+  left: 450px;
+  top: 65px;
+}
+
+.img {
+  position: relative;
+  right: 480px;
+  top: 50px;
+}
+
+.img2 {
+  text-decoration: none;
+  position: relative;
+  right: 450px;
+  top: 50px;
+}
+
+.img3 {
+  position: relative;
+  right: 380px;
+}
+
+.img4 {
+  position: relative;
+  left: 690px;
+  top: 55px;
+}

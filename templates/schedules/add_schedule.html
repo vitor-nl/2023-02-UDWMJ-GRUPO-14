@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% load widget_tweaks %}
+
+{% block title %}
+    Adicionar Agendamento - {{ block.super }}
+{% endblock title %}
+
+{% block body %}
+    <div class="container">
+        <br />
+        <h5><b>Cadastro de Agendamento</b></h5>
+        <div class="row">
+            <div class="col-md-12">
+                <form action="" method="POST" enctype="multipart/form-data"> 
+                    {% csrf_token %}
+                    
+                    <div class="form-group">
+                        <label for="{{ form.name.id_for_label }}">Nome do Usuário:</label>
+                        {{ form.name|add_class:"form-control" }}
+                        <a>Aqui vai a mensagem de erro...</a>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="{{ form.email.id_for_label }}">Email:</label>
+                        {{ form.email|add_class:"form-control" }}
+                        <a>Aqui vai a mensagem de erro...</a>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="{{ form.cell_phone.id_for_label }}">Telefone:</label>
+                        {{ form.cell_phone|add_class:"form-control" }}
+                        <a>Aqui vai a mensagem de erro...</a>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="{{ form.service.id_for_label }}">Serviço:</label>
+                        {{ form.service|add_class:"form-control" }}
+                        <a>Aqui vai a mensagem de erro...</a>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="{{ form.worker.id_for_label }}">Profissional:</label>
+                        {{ form.worker|add_class:"form-control" }}
+                        <a>Aqui vai a mensagem de erro...</a>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Salvar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock body %}

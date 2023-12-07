@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% block title %}
+
+    Lista de Agendamentos - {{ block.super }}
+
+{% endblock title %}
+
+{% block body %}
+    <div class="container">
+        <br />
+        <h5><b>Lista de Agendamentos</b></h5>
+        <br />
+            <a href="{% url 'schedules:add_schedule' %}">Cadastro de novo agendamento</a>
+        <br />
+        <br />
+        <div class="row">
+            <div class="col-md-12">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Nome</th>
+                            <th scope="col">E-mail</th>
+                            <th scope="col">Telefone Celular</th>
+                            <th scope="col">Serviço</th>
+                            <th scope="col">Profissional</th>
+                            <th scope="col"></th>
+                            <th scope="col"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for schedule in schedules %}
+                            <tr>
+                                <th scope="row">{{ schedule.id }}</th>
+                                <td>{{ schedule.name }}</td>
+                                <td>{{ schedule.email }}</td>
+                                <td>{{ schedule.cell_phone }}</td>
+                                <td>{{ schedule.get_service_display }}</td>
+                                <td>{{ schedule.get_worker_display }}</td>
+                                <td>
+                                    <a href="{% url 'schedules:edit_schedule' schedule.id %}" class="btn btn-primary btn-sm">Editar</a>
+                                </td>
+                                <td>
+                                    <a href="{% url 'schedules:delete_schedule' schedule.id %}" class="btn btn-danger btn-sm">Excluir</a>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+{% endblock body %}

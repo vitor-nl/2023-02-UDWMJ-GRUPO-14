@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'widget_tweaks',
     'products.apps.ProductsConfig',
     'schedules.apps.SchedulesConfig',
+    'workers.apps.WorkersConfig',
     
 ]
 

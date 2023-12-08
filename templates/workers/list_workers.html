@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Lista de Profissionais - {{ block.super }}
+{% endblock title %}
+
+{% block body %}
+    <div class="container">
+        <br />
+        <h5><b>Lista de Profissionais</b></h5>
+        <br />
+        <button type="submit" class="btn btn-primary">
+            <a style="color: aliceblue;" href="{% url 'workers:add_worker' %}">Cadastro de novo Profissional</a>
+        </button>
+        <br />
+        <br />
+        <div class="row">
+            <div class="col-md-12">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Nome</th>
+                            <th scope="col">CPF</th>
+                            <th scope="col">Telefone Celular</th>
+                            <th scope="col">Descrição</th>
+                            <th scope="col"></th>
+                            <th scope="col"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for worker in workers %}
+                            <tr>
+                                <th scope="row">{{ worker.id }}</th>
+                                <td>{{ worker.name }}</td>
+                                <td>{{ worker.cpf }}</td>
+                                <td>{{ worker.cell_phone }}</td>
+                                <td>{{ worker.description }}</td>
+                                <td>
+                                    <a href="{% url 'workers:edit_worker' worker.id %}" class="btn btn-primary btn-sm">Editar</a>
+                                </td>
+                                <td>
+                                    <a href="{% url 'workers:delete_worker' worker.id %}" class="btn btn-danger btn-sm">Excluir</a>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+{% endblock body %}

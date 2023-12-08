@@ -6,7 +6,7 @@ class Schedule(models.Model):
     email = models.EmailField('E-mail',null=False, blank=False)
     cell_phone = models.CharField('Telefone celular', max_length=20)
     service = models.CharField('Serviço', max_length=50)
-    worker = models.CharField('Profissional', max_length=50)  
+    worker = models.CharField('Profissional', max_length=50)
     
     class Meta:
         verbose_name = 'Agendamento'

@@ -2,53 +2,60 @@
 
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'css/jquery-ui.css' %}">
-    <link rel="stylesheet" href="{% static 'css/styles2.css' %}">
-    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
-    <title>{% block title %}Belezu{% endblock title %}</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'css/jquery-ui.css' %}">
+  <link rel="stylesheet" href="{% static 'css/styles2.css' %}">
+  <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+
+<!--FONT AWESOME-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!--GOOGLE FONTS-->
+<link rel="preconnect" href="https://fonts.gstatic.com%22%3E/">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Play&display=swap" rel="stylesheet">
+  <title>{% block title %}Belezu{% endblock title %}</title>
 </head>
+
 <body>
-    <!-- INICIO: Bloco do Bootstrap a ser incluido -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="{% url 'core:home' %}"><img style="width: 120px;" src="{% static 'img/belezu-img.png' %}" alt=""></a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <a class="navbar-brand" href="{% url 'schedules:list_schedules' %}">Agendamento</a>
-              </li>
-              <li class="nav-item">
-                <a class="navbar-brand" href="{% url 'categories:list_categories' %}">Categorias</a>
-              </li>
-              <li class="nav-item">
-                <a class="navbar-brand" href="{% url 'workers:list_workers' %}">Profissionais</a>
-              </li>
-              <li class="nav-item">
-                <a class="navbar-brand" aria-current="page" href="{% url 'products:list_products' %}">Produtos</a>
-              </li>
-            <form class="d-flex">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
-          </div>
-        </div>
-      </nav>
-    
+  <!-- INICIO: Bloco do Bootstrap a ser incluido -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="{% url 'core:home' %}"><img style="width: 120px;"
+          src="{% static 'img/belezu-img.png' %}" alt=""></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <a class="navbar-brand" href="{% url 'schedules:list_schedules' %}">Agendamento</a>
+          </li>
+          <li class="nav-item">
+            <a class="navbar-brand" href="{% url 'categories:list_categories' %}">Categorias</a>
+          </li>
+          <li class="nav-item">
+            <a class="navbar-brand" href="{% url 'workers:list_workers' %}">Profissionais</a>
+          </li>
+          <li class="nav-item">
+            <a class="navbar-brand" aria-current="page" href="{% url 'products:list_products' %}">Produtos</a>
+          </li>
+      </div>
+    </div>
+  </nav>
+
     <!-- FIM: Bloco do Bootstrap a ser incluido -->
 
     {% block body %}
-    
+
     {% endblock body %}
-    
+
     <script src="{% static 'js/jquery-3.5.1.min.js' %}"></script>
     <script src="{% static 'js/jquery.mask.min.js' %}"></script>
     <script src="{% static 'js/jquery-ui.js' %}"></script>
     <script src="{% static 'js/bootstrap.min.js' %}"></script>
-</body>
+  </body>
 </html>

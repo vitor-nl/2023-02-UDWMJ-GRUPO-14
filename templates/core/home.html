@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block title %}
     {{ block.super }}
@@ -6,6 +7,44 @@
 
 {% block body %}
 
-<!-- Codigo html especifico desse arquivo -->
+    <div class="historia">
+      <div class="div-historia"></div>  
+            <h1 class="titulo">Um pouco de nossa história</h1>    
+      </div>
+        <p class="texto">O Belezu foi fundado em 2015 por dois profissionais do ramo da beleza que buscavam sua própria forma de trabalhar,
+            com o objetivo de ousar em penteados e buscando espandir a visão das pessoas sobre um salão de beleza. 
+            
+            Com o tempo foram investindo em manicure e pedicure, contratando os melhores profissionais da região e oferecendo
+            o melhor atendimento!! essa é a cara do Belezu.</p>
+    </div>
+</div>
+
+<div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="{%  static 'img/progressiva-sem-formol-abre-1.jpg' %}" class="d-block w-100" alt="...">
+
+
+
+
+        <div class="footer">
+            <div class="row text-center">
+                <a href="https://web.whatsapp.com/"><i class="fa fa-whatsapp"></i></a>
+                <a href="https://www.instagram.com/"><i class="fa fa-instagram"></i></a>
+                <a href="https://pt-br.facebook.com/"><i class="fa fa-facebook"></i></a>
+            </div>
+
+            <div class="row container-fluid text-center">
+                <ul>
+                    <li><a href="#">Carreiras</a></li>
+                    <li><a href="https://projetosjp.my.canva.site/nossosservicos">Nossos serviços</a></li>
+                    <li><a href="#">Feedback</a></li>
+                </ul>
+            </div>
+
+            <div class="row">
+                Belezu Copyright © 2023 Belezu - Todos os direitos reservados || 
+            </div>
+        </div>
 
 {% endblock body %}
